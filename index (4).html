@@ -387,16 +387,71 @@
     ::-webkit-scrollbar-thumb { background: var(--blue-light); border-radius: 3px; }
 
     @media (max-width: 900px) {
-      nav { padding: 1rem 1.5rem; }
+      body { cursor: auto; }
+      .cursor-dot, .cursor-ring { display: none !important; }
+
+      nav { padding: 1rem 1.25rem; }
       .nav-links { display: none; }
-      .hero { flex-direction: column; padding: 7rem 1.5rem 3rem; gap: 2rem; }
-      .hero-right { display: none; }
-      .page-section { padding: 4rem 1.5rem; }
-      .projects-grid { grid-template-columns: 1fr; }
+      .nav-logo { font-size: 1.1rem; gap: 0.4rem; }
+      .nav-logo-icon { width: 32px; height: 32px; font-size: 0.9rem; border-radius: 8px; }
+      .nav-cta { padding: 0.5rem 1.1rem; font-size: 0.8rem; }
+
+      .hero { flex-direction: column; padding: 6.5rem 1.25rem 2.5rem; gap: 1.5rem; align-items: flex-start; }
+      .hero-name { font-size: clamp(2.5rem, 10vw, 4.5rem); line-height: 1.0; }
+      .hero-subtitle { font-size: clamp(1.2rem, 5vw, 1.8rem); margin-bottom: 1rem; }
+      .hero-desc { font-size: 0.95rem; margin-bottom: 1.5rem; max-width: 100%; }
+      .hero-socials { margin-bottom: 1.5rem; gap: 0.8rem; }
+      .hero-actions { gap: 1rem; flex-wrap: wrap; width: 100%; }
+      .btn-pill { padding: 0.85rem 1.75rem; font-size: 0.8rem; text-align: center; flex: 1; min-width: 160px; }
+      .btn-text { font-size: 0.8rem; justify-content: center; padding: 0.5rem 0; }
+
+      .hero-right {
+        display: flex !important; flex-direction: row; gap: 1rem; justify-content: flex-start;
+        width: 100%; height: auto; margin-left: 0; margin-top: 1rem; flex-wrap: wrap;
+      }
+      .hero-right .dots, .hero-right .hero-circle { display: none !important; }
+      .hero-right .stat-pill {
+        position: static !important; transform: none !important;
+        flex: 1; min-width: 140px; justify-content: flex-start; padding: 0.75rem 1.25rem;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.06); border: 1px solid rgba(59,91,219,0.08);
+      }
+      .stat-num { font-size: 1.6rem; }
+      .stat-label { font-size: 0.6rem; }
+
+      .page-section { padding: 3.5rem 1.25rem; }
+      .section-title { font-size: clamp(1.8rem, 6vw, 2.5rem); }
+      .section-sub { margin-bottom: 2rem; font-size: 0.92rem; }
+
+      .skills-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+      .skill-card { padding: 1.25rem; }
+      .skill-emoji { font-size: 1.8rem; margin-bottom: 0.75rem; }
+
+      .projects-grid { grid-template-columns: 1fr; gap: 1rem; }
       .projects-grid .project-card.featured { grid-column: auto; }
-      .exp-item { grid-template-columns: 1fr; gap: 0.5rem; }
-      .contact-wrapper { grid-template-columns: 1fr; gap: 2rem; }
-      footer { padding: 2rem 1.5rem; }
+      .project-card { padding: 1.5rem; border-radius: 20px; }
+      .project-name { font-size: 1.15rem; }
+      .project-arrow { top: 1.25rem; right: 1.25rem; width: 34px; height: 34px; font-size: 0.85rem; }
+
+      .exp-list { gap: 1rem; }
+      .exp-item { grid-template-columns: 1fr; gap: 0.4rem; padding: 1.25rem !important; border-radius: 16px !important; border-left: 3px solid rgba(59,91,219,0.1); }
+      .exp-item:hover { border-left-color: var(--blue); padding-left: 1.25rem !important; }
+      .exp-role { font-size: 1rem; }
+
+      .edu-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+      .edu-card { padding: 1.25rem; }
+
+      .ach-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+      .ach-card { padding: 1.25rem; }
+      .ach-medal { font-size: 2rem; }
+
+      .contact-wrapper { grid-template-columns: 1fr; gap: 1.75rem; }
+      .contact-big { font-size: clamp(1.8rem, 6vw, 2.6rem); }
+      .contact-card { padding: 1.25rem; border-radius: 20px; }
+      .contact-link { padding: 0.85rem 0; }
+      .contact-link-value { font-size: 0.85rem; word-break: break-all; }
+      .contact-link-icon { width: 34px; height: 34px; font-size: 0.9rem; border-radius: 8px; }
+
+      footer { padding: 2rem 1.25rem; font-size: 0.75rem; }
     }
   </style>
 </head>
@@ -650,7 +705,7 @@
       <div class="edu-school">RASS JB Public School, Datia M.P.</div>
       <div class="edu-year">2024</div>
     </div>
-    <div ="edu-card fade-up">
+    <div class="edu-card fade-up">
       <span class="edu-icon">📖</span>
       <div class="edu-degree">Class X — CBSE</div>
       <div class="edu-school">RASS JB Public School, Datia M.P.</div>
@@ -729,7 +784,7 @@
 </section>
 
 <footer>
-  <p>© 2025 <span>Prince Gautam</span> — Full Stack Developer &amp; Agentic AI Builder · MITS Gwalior</p>
+  <p>© 2026 <span>Prince Gautam</span> — Full Stack Developer &amp; Agentic AI Builder · MITS Gwalior</p>
   <p>Built with precision. Powered by curiosity.</p>
 </footer>
 
